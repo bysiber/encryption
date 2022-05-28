@@ -54,7 +54,8 @@ class MD5BC(): # MD5 BASİC CRYPTER
 if __name__ == "__main__":
     pKey = "jhA8hs8UA82LKAmX9ajs821Jx"
     bcryptor = MD5BC(CHARACTERS,pKey)
-    hashes = bcryptor.encrypt("feel")
+    text = "feel"
+    hashes = bcryptor.encrypt(text)
     print("from letters of text to hashes:\n",hashes)
     print("from hashes to text:\n",bcryptor.decrypt(hashes))
 
