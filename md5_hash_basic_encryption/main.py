@@ -7,7 +7,7 @@ nums = ['0','1','2','3','4','5','6','7','8','9']
 spcs = [" ","/","\\",":","*","_","-",".",",","#","`","'","^","<",">","$","{","}","[","]","|","%","+","-","&","(",")","="]
 CHARACTERS = tr_s + tr_b + nums + spcs
 
-class MD5BC(): # MD5 BASİC CRYPTOR
+class MD5BC(): # MD5 BASİC CRYPTER
     def __init__(self,chars,privateKey):
         self.privateKey = privateKey #This key must be safeguarded
         self.PHash = hash_MD5(self.privateKey)
