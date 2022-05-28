@@ -1,0 +1,33 @@
+->This algorithm converts each letter of the entered text into a unique hash.
+
+Let's say you have a text.
+this text -> "feel"
+
+
+## if you don't use hashCounter ##
+
+the action of the function -> priviateKey + char   
+# example: "sjfha812" + "f"
+
+index:1 -> "f" -> hash: 0481b2b9c3364cefd6972c8a2bee2650 different
+index:2 -> "e" -> hash: b208538bcc55728487d4fd442807388b same
+index:3 -> "e" -> hash: b208538bcc55728487d4fd442807388b same
+index:4 -> "l" -> hash: 13412d308fa6ad5c2671fca4f93cc2ef different
+
+-> you can see, index 2 and 3 are the same because they have "e" characters.
+-> in this case, the text can be broken by frequency analysis. We need to prevent this.
+-> so we can prevent frequency analysis by adding index values ​​when calculating hashes.
+
+
+## if you use hashCounter ##
+
+hashCounter => index
+the action of the function -> hashCounter + priviateKey + char   
+# example: 1 + "sjfha812" + "f"
+
+index:1 -> "f" -> hash: dfdd0187b1223f7fa427c5193f5d8680 different
+index:2 -> "e" -> hash: 52b0f1c9240fb468e313adafdc24dbc4 different
+index:3 -> "e" -> hash: 945df154b754abf17b31154cc001eedb different
+index:4 -> "l" -> hash: 2bc1d7dc181bbe209ac49850371e48b0 different
+
+-> As you can see, they are all different now, so frequency analysis will no longer work.
